@@ -31,7 +31,7 @@ export default function Page() {
         <div className="my-2">
           <Image
             className="rounded-lg"
-            src={"/projects/login.jpeg"}
+            src={"/projects/login.png"}
             width={500}
             height={200}
             alt="U-library login page"

@@ -4,13 +4,11 @@ import { CgMenuRight } from "react-icons/cg";
 import { HiOutlineNewspaper } from "react-icons/hi";
 import { LuHome } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
-import { PiGameControllerBold } from "react-icons/pi";
+import { MdOutlineRocketLaunch } from "react-icons/md";
 import {
-  SiFacebook,
   SiGithub,
   SiInstagram,
   SiLinkedin,
-  SiTwitter,
 } from "react-icons/si";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
@@ -32,18 +30,18 @@ const itemList: ItemList[] = [
     icon: <LuHome />,
   },
   {
-    text: "article",
-    link: "/",
+    text: "projects",
+    link: "/projetc",
+    icon: <MdOutlineRocketLaunch />,
+  },
+  {
+    text: "blog",
+    link: "/blog",
     icon: <HiOutlineNewspaper />,
   },
   {
-    text: "games",
-    link: "/",
-    icon: <PiGameControllerBold />,
-  },
-  {
     text: "contact",
-    link: "/",
+    link: "/contact",
     icon: <MdOutlineMail />,
   },
 ];
@@ -51,28 +49,18 @@ const itemList: ItemList[] = [
 const contactList: ItemList[] = [
   {
     text: "github",
-    link: "#",
+    link: "https://github.com/rizky-pratama",
     icon: <SiGithub />,
   },
   {
     text: "linkedin",
-    link: "#",
+    link: "https://www.linkedin.com/in/rizkyprtm",
     icon: <SiLinkedin />,
   },
   {
     text: "instagram",
-    link: "#",
+    link: "https://instagram.com/rizkyprtm___",
     icon: <SiInstagram />,
-  },
-  {
-    text: "twitter",
-    link: "#",
-    icon: <SiTwitter />,
-  },
-  {
-    text: "facebook",
-    link: "#",
-    icon: <SiFacebook />,
   },
 ];
 
@@ -135,7 +123,7 @@ const Sidebar = (props: Props) => {
             </ul>
             <Link
               href={"#"}
-              className="w-max px-6 py-3 text-base font-medium rounded-full bg-gradient-to-br from-indigo-500  to-indigo-600  hover:from-indigo-400 hover:to-indigo-300 transition-all duration-100 shadow-md shadow-indigo-600/60 cursor-pointer hover:translate-x-2"
+              className="w-max px-6 py-3 text-base font-medium rounded-full bg-gradient-to-br from-indigo-500  to-indigo-600 hover:text-white  hover:from-indigo-400 hover:to-indigo-300 transition-all duration-100 shadow-md shadow-indigo-600/60 cursor-pointer hover:translate-x-2"
             >
               Download CV
             </Link>
@@ -150,6 +138,7 @@ const Sidebar = (props: Props) => {
                   <Link
                     href={link}
                     className="flex gap-2 items-center text-base font-medium text-neutral-100 hover:text-indigo-500 capitalize transition-colors duration-100"
+                    target="_blank"
                   >
                     {icon}
                     {text}

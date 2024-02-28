@@ -1,9 +1,9 @@
 "use client"
 import MainLayout from "@/components/Layouts/MainLayout";
 import { Icon } from '@iconify/react';
-import Projects from "@/components/MainPage/Projects";
-import Education from "@/components/MainPage/Education";
-import SkillsIcon from "@/components/MainPage/SkillsIcon";
+import Projects from "@/components/ContainerPage/MainPage/Projects";
+import Education from "@/components/ContainerPage/MainPage/Education";
+import SkillsIcon from "@/components/ContainerPage/MainPage/SkillsIcon";
 import Link from "next/link";
 
 export default function Page() {

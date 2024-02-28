@@ -1,15 +1,13 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CgMenuRight } from "react-icons/cg";
 import { HiOutlineNewspaper } from "react-icons/hi";
 import { LuHome } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
 import { MdOutlineRocketLaunch } from "react-icons/md";
-import {
-  SiGithub,
-  SiInstagram,
-  SiLinkedin,
-} from "react-icons/si";
+import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 interface Props {
@@ -31,7 +29,7 @@ const itemList: ItemList[] = [
   },
   {
     text: "projects",
-    link: "/projetc",
+    link: "/projects",
     icon: <MdOutlineRocketLaunch />,
   },
   {
@@ -67,6 +65,15 @@ const contactList: ItemList[] = [
 const Sidebar = (props: Props) => {
   const { open, setOpen } = props;
   const classOpen: String = !open ? "-left-[450px] " : "left-0 ";
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    if (path === "/") {
+      return pathname === path;
+    }
+    return pathname.startsWith(path);
+  };
+
   return (
     <div
       className={`fixed lg:relative ${classOpen} lg:left-0 h-screen  w-[380px]  transition-all duration-75`}
@@ -113,7 +120,9 @@ const Sidebar = (props: Props) => {
                 <li key={i} className="flex">
                   <Link
                     href={link}
-                    className="flex gap-2 items-center text-base font-medium text-neutral-100 hover:text-indigo-500 capitalize transition-colors duration-100"
+                    className={`flex gap-2 items-center text-base font-medium ${
+                      isActive(link) ? "text-indigo-500" : "text-neutral-100"
+                    } hover:text-indigo-500 capitalize transition-colors duration-100`}
                   >
                     {icon}
                     {text}

@@ -19,9 +19,9 @@ const Page = () => {
         You can contact me at{" "}
         <Link
           className="underline"
-          href="mailto:muhammadrizkypratama2308@gmail.com"
+          href="mailto:muhammadrizkyprtm2308@gmail.com"
         >
-          muhammadrizkypratama2308@gmail.com
+          muhammadrizkyprtm2308@gmail.com
         </Link>
       </p>
     </div>

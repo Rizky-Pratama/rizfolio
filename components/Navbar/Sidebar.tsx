@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CgMenuRight } from "react-icons/cg";
-import { HiOutlineNewspaper } from "react-icons/hi";
 import { LuHome } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
 import { MdOutlineRocketLaunch } from "react-icons/md";
@@ -31,11 +30,6 @@ const itemList: ItemList[] = [
     text: "projects",
     link: "/projects",
     icon: <MdOutlineRocketLaunch />,
-  },
-  {
-    text: "blog",
-    link: "/blog",
-    icon: <HiOutlineNewspaper />,
   },
   {
     text: "contact",
